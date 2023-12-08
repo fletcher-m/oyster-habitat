@@ -5,7 +5,7 @@ This repository analyzes suitable oyster habitat among EEZ regions of the US wes
 This repository contains one R markdown file, 'oyster_habitat.Rmd' that analyzes the area of each of the 5 west coast EEZ regions that would be considered suitable habitat for oysters. The idea would be to find the EEZ containing the most amount of suitable space and prioritize that zone for oyster fishing. 
 
 ## Visualization
-After some raster wrangling, during which I took a series of steps in order to make both rasters compatible and able to be used together, I plotted the area along the west coast that fit my parameters for water temperature and depth. 
+After some raster wrangling, during which I took a series of steps in order to make both rasters compatible and able to be used together, I plotted the area along the west coast that fit my parameters for water temperature and depth. I then joined this data with EEZ Zone areas and plotted both total suitable area in each of the EEZ zones and percentage of total EEZ zone area that is suitable for oysters. 
 
 ## Highlights
  
