@@ -14,7 +14,7 @@ Author: Fletcher McConnell
 
 Github Repository: <https://github.com/fletcher-m/oyster-habitat>
 
-## About 
+## About
 
 This R Markdown document contains code and outputs that analyse suitable habitats for Oysters to live in and compares these ranges with potential areas within EEZ regions on the US west coast.
 
@@ -44,11 +44,11 @@ Exclusive Economic Zone (EEZ) Data:
 
 -   This data specifies maritime boundaries for the EEZ zones off of the west coast of the US. This data can be accessed here: [Marineregions.org] <https://www.marineregions.org/eez.php>
 
-## Final Output 
+## Final Output
 
 ![](images/eez_area.png)
 
-## ![](images/eez_percent.png) 
+## ![](images/eez_percent.png)
 
 ## Load Packages
 
@@ -177,13 +177,15 @@ ggplot(total_suitable_area) +
   theme_minimal()
 ```
 
+# Generalize Workflow
+
 ## Create a Function to Accept Other Species' Ranges
 
 ```{r}
 species_range_function <- function(species, min_depth, max_depth, min_temp, max_temp) {
   
-  depth_input <- matrix(c(min_depth, max_depth, 1,
-                    -Inf, min_depth, NA, max_depth, Inf, NA),
+  depth_input <- matrix(c(max_depth, min_depth, 1,
+                    -Inf, max_depth, NA, min_depth, Inf, NA),
                     byrow = TRUE, ncol = 3)
   
   depth_classify <- classify(depth, depth_input)
@@ -226,4 +228,10 @@ species_range_function <- function(species, min_depth, max_depth, min_temp, max_
   print(fish_percent_plot)
   
 }
+```
+
+## Use function for Skipjack Tuna Temperature and Depth Ranges
+
+```{r}
+species_range_function("Skipjack Tuna", 0, -260, 10, 21)
 ```
