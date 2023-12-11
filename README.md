@@ -15,6 +15,7 @@ After some raster wrangling, during which I took a series of steps in order to m
   - Creating and customizing spatial plot
 
 ## Data
+The data that I used for this analysis is available in the 'data' folder within this repository. The sources for this data can be found below.
 The sea surface temperature data can be accessed here (I used data from 2008 through 2012: https://coralreefwatch.noaa.gov/product/5km/index_5km_ssta.php
 The water depth data can be accessed here: https://www.gebco.net/data_and_products/gridded_bathymetry_data/#area
 EEZ zone data can be accessed here https://www.marineregions.org/eez.php. All data was accessed on December 1, 2023.
